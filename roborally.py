@@ -63,8 +63,8 @@ class Card(object):
 
     def __init__(self, priority, command, distance=0):
         """ Instantiate a Card. """
-        self.command = command
         self.priority = priority
+        self.command = command
         self.distance = distance
 
     def __str__(self):
