@@ -102,45 +102,47 @@ class RoboRally(object):
 
         """
         # UNFINISHED
-        while (len(self.robots[0].registers) != 0):
-            card = self.robots[0].registers.pop()  # Retrieve first Card for first Robot
-    
-            if (card.command == 'F'):
-                if (self.robots[0].heading == 0):  # increase x 
-                    self.robots[0].x += card.distance
-                    
-                elif (self.robots[0].heading == 90):  # increase y
-                    self.robots[0].y += card.distance
-                    
-                elif (self.robots[0].heading == 180):  # decrease x
-                    self.robots[0].x -= card.distance
-                    
-                elif (self.robots[0].heading == 270):  # decrease y
-                    self.robots[0].y -= card.distance
+        for robot in self.robots:  # For each Robot
+            while (len(robot.registers) != 0):  # For each register
                 
-            elif (card.command == 'L'):
-                if (self.robots[0].heading == 0):
-                    self.robots[0].heading = 90
-                    
-                elif (self.robots[0].heading == 90):
-                    self.robots[0].heading = 180
-                    
-                elif (self.robots[0].heading == 180):
-                    self.robots[0].heading = 270
-                    
-                elif (self.robots[0].heading == 270):
-                    self.robots[0].heading = 0
+                card = robot.registers.pop()  # Retrieve card
                 
-            elif (card.command == 'R'):
-                if (self.robots[0].heading == 0):
-                    self.robots[0].heading = 270
+                if (card.command == 'F'):
+                    if (robot.heading == 0):  # increase x 
+                        robot.x += card.distance
+                        
+                    elif (robot.heading == 90):  # increase y
+                        robot.y += card.distance
+                        
+                    elif (robot.heading == 180):  # decrease x
+                        robot.x -= card.distance
+                        
+                    elif (robot.heading == 270):  # decrease y
+                        robot.y -= card.distance
                     
-                elif (self.robots[0].heading == 90):
-                    self.robots[0].heading = 0
+                elif (card.command == 'L'):
+                    if (robot.heading == 0):
+                        robot.heading = 90
+                        
+                    elif (robot.heading == 90):
+                        robot.heading = 180
+                        
+                    elif (robot.heading == 180):
+                        robot.heading = 270
+                        
+                    elif (robot.heading == 270):
+                        robot.heading = 0
                     
-                elif (self.robots[0].heading == 180):
-                    self.robots[0].heading = 90
-                    
-                elif (self.robots[0].heading == 270):
-                    self.robots[0].heading = 180
-        
+                elif (card.command == 'R'):
+                    if (robot.heading == 0):
+                        robot.heading = 270
+                        
+                    elif (robot.heading == 90):
+                        robot.heading = 0
+                        
+                    elif (robot.heading == 180):
+                        robot.heading = 90
+                        
+                    elif (robot.heading == 270):
+                        robot.heading = 180
+            
