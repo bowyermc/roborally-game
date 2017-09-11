@@ -105,14 +105,17 @@ class RoboRally(object):
         card = robots[0].registers[0]  # Retrieve first Card for first Robot
 
         if (card.command == 'F'):
-            if (robots[0].heading == 0):
-                pass
-            elif (robots[0].heading == 90):
-                pass
-            elif (robots[0].heading == 180):
-                pass
-            elif (robots[0].heading == 270):
-                pass
+            if (robots[0].heading == 0):  # increase x 
+                robots[0].x += card.distance
+                
+            elif (robots[0].heading == 90):  # increase y
+                robots[0].y += card.distance
+                
+            elif (robots[0].heading == 180):  # decrease x
+                robots[0].x -= card.distance
+                
+            elif (robots[0].heading == 270):  # decrease y
+                robots[0].y -= card.distance
             
         elif (card.command == 'L'):
             if (robots[0].heading == 0):
