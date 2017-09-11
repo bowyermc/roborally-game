@@ -151,6 +151,7 @@ class RoboRally(object):
     def _check_pos_0(self, other_robots, robot):
         """Recursive helper function that checks for other Robots in the 
         current position and moves them in the positive x direction
+        
         """
         if (len(other_robots) == 0):  # check for base case
             return
