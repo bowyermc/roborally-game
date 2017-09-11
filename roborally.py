@@ -102,4 +102,11 @@ class RoboRally(object):
 
         """
         # UNFINISHED
-        pass
+        card = robots[0].registers[0]  # Retrieve first Card for first Robot
+        if (card.command == 'F'):
+            pass
+        elif (card.command == 'L'):
+            pass
+        elif (card.command == 'R'):
+            pass
+        
