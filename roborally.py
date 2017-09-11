@@ -87,7 +87,6 @@ class RoboRally(object):
         """ Instantiate a game instance with no robots. """
         # UNFINISHED
         self.robots = []  # list of robots in game
-        self.robot_cards = {}  # dict maps from robots to their given cards
 
     def add_robot(self, robot):
         """ Add a robot to the game. """
