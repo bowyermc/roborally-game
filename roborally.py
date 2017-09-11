@@ -88,13 +88,11 @@ class RoboRally(object):
         # UNFINISHED
         self.robots = []  # list of robots in game
         self.robot_cards = {}  # dict maps from robots to their given cards
-        pass
 
     def add_robot(self, robot):
         """ Add a robot to the game. """
         # UNFINISHED
         self.robots.append(robot)
-        pass
 
     def run(self):
         """Play all robot cards.  After this method executes all Robots will
