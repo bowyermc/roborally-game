@@ -130,7 +130,7 @@ class RoboRally(object):
             elif (self.robots[0].heading == 270):
                 self.robots[0].heading = 0
             
-        elif (self.card.command == 'R'):
+        elif (card.command == 'R'):
             if (self.robots[0].heading == 0):
                 self.robots[0].heading = 270
                 
