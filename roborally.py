@@ -86,11 +86,13 @@ class RoboRally(object):
     def __init__(self):
         """ Instantiate a game instance with no robots. """
         # UNFINISHED
+        self.robots = []
         pass
 
     def add_robot(self, robot):
         """ Add a robot to the game. """
         # UNFINISHED
+        self.robots.append(robot)
         pass
 
     def run(self):
