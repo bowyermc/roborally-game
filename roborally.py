@@ -85,12 +85,10 @@ class RoboRally(object):
 
     def __init__(self):
         """ Instantiate a game instance with no robots. """
-        # UNFINISHED
         self.robots = []  # list of robots in game
 
     def add_robot(self, robot):
         """ Add a robot to the game. """
-        # UNFINISHED
         self.robots.append(robot)
 
     def run(self):
@@ -101,7 +99,6 @@ class RoboRally(object):
         subsequent rounds (unless it is pushed by another robot).
 
         """
-        # UNFINISHED
         for robot in self.robots:  # For each Robot
             while (len(robot.registers) != 0):  # For each register
                 
