@@ -108,17 +108,22 @@ class RoboRally(object):
                 card = robot.registers.pop()  # Retrieve card
                 
                 if (card.command == 'F'):
-                    if (robot.heading == 0):  # increase x 
-                        robot.x += card.distance
+                    for step in range(card.distance):
                         
-                    elif (robot.heading == 90):  # increase y
-                        robot.y += card.distance
-                        
-                    elif (robot.heading == 180):  # decrease x
-                        robot.x -= card.distance
-                        
-                    elif (robot.heading == 270):  # decrease y
-                        robot.y -= card.distance
+                        if (robot.heading == 0):  # increase x 
+                            robot.x += 1
+                            other_robots = 
+                                [o for o in self.robots if o is not robot]
+                            self._check_pos_0(other_robots, robot)
+                            
+                        elif (robot.heading == 90):  # increase y
+                            robot.y += 1
+                            
+                        elif (robot.heading == 180):  # decrease x
+                            robot.x -= 1
+                            
+                        elif (robot.heading == 270):  # decrease y
+                            robot.y -= 1
                     
                 elif (card.command == 'L'):
                     if (robot.heading == 0):
@@ -145,4 +150,16 @@ class RoboRally(object):
                         
                     elif (robot.heading == 270):
                         robot.heading = 180
+        
+    def _check_pos_0(self, other_robots, robot):
+        """Helper function that checks for other Robots in the 
+        current position
+        """
+        if (len(other_robots) == 0):  # check for base case
+            return
             
+        other = other_robots.pop(0)  # get next robot
+        if (other.x == robot.x and other.y == robot.y):  # compare coordinates          
+            other.x += 1  # push other robot over
+            
+        return self._check_pos_0(other_robots, other)  # recurse next robot
