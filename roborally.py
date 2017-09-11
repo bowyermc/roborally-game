@@ -102,44 +102,44 @@ class RoboRally(object):
 
         """
         # UNFINISHED
-        card = robots[0].registers[0]  # Retrieve first Card for first Robot
+        card = self.robots[0].registers[0]  # Retrieve first Card for first Robot
 
         if (card.command == 'F'):
-            if (robots[0].heading == 0):  # increase x 
-                robots[0].x += card.distance
+            if (self.robots[0].heading == 0):  # increase x 
+                self.robots[0].x += card.distance
                 
-            elif (robots[0].heading == 90):  # increase y
-                robots[0].y += card.distance
+            elif (self.robots[0].heading == 90):  # increase y
+                self.robots[0].y += card.distance
                 
-            elif (robots[0].heading == 180):  # decrease x
-                robots[0].x -= card.distance
+            elif (self.robots[0].heading == 180):  # decrease x
+                self.robots[0].x -= card.distance
                 
-            elif (robots[0].heading == 270):  # decrease y
-                robots[0].y -= card.distance
+            elif (self.robots[0].heading == 270):  # decrease y
+                self.robots[0].y -= card.distance
             
         elif (card.command == 'L'):
-            if (robots[0].heading == 0):
-                robots[0].heading = 90
+            if (self.robots[0].heading == 0):
+                self.robots[0].heading = 90
                 
-            elif (robots[0].heading == 90):
-                robots[0].heading = 180
+            elif (self.robots[0].heading == 90):
+                self.robots[0].heading = 180
                 
-            elif (robots[0].heading == 180):
-                robots[0].heading = 270
+            elif (self.robots[0].heading == 180):
+                self.robots[0].heading = 270
                 
-            elif (robots[0].heading == 270):
-                robots[0].heading = 0
+            elif (self.robots[0].heading == 270):
+                self.robots[0].heading = 0
             
-        elif (card.command == 'R'):
-            if (robots[0].heading == 0):
-                robots[0].heading = 270
+        elif (self.card.command == 'R'):
+            if (self.robots[0].heading == 0):
+                self.robots[0].heading = 270
                 
-            elif (robots[0].heading == 90):
-                robots[0].heading = 0
+            elif (self.robots[0].heading == 90):
+                self.robots[0].heading = 0
                 
-            elif (robots[0].heading == 180):
-                robots[0].heading = 90
+            elif (self.robots[0].heading == 180):
+                self.robots[0].heading = 90
                 
-            elif (robots[0].heading == 270):
-                robots[0].heading = 180
+            elif (self.robots[0].heading == 270):
+                self.robots[0].heading = 180
         
