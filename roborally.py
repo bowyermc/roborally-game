@@ -104,7 +104,7 @@ class RoboRally(object):
                 
                 card = robot.registers.pop()  # Retrieve card
                 
-                if (card.command == 'F'):
+                if (card.command == 'F'):  # Move forward
                     for step in range(card.distance):
                         
                         if (robot.heading == 0):  # increase x 
@@ -122,7 +122,7 @@ class RoboRally(object):
                         elif (robot.heading == 270):  # decrease y
                             robot.y -= 1
                     
-                elif (card.command == 'L'):
+                elif (card.command == 'L'):  # Turn left
                     if (robot.heading == 0):
                         robot.heading = 90
                         
@@ -135,7 +135,7 @@ class RoboRally(object):
                     elif (robot.heading == 270):
                         robot.heading = 0
                     
-                elif (card.command == 'R'):
+                elif (card.command == 'R'):  # Turn right
                     if (robot.heading == 0):
                         robot.heading = 270
                         
@@ -149,8 +149,8 @@ class RoboRally(object):
                         robot.heading = 180
         
     def _check_pos_0(self, other_robots, robot):
-        """Helper function that checks for other Robots in the 
-        current position
+        """Recursive helper function that checks for other Robots in the 
+        current position and moves them in the positive x direction
         """
         if (len(other_robots) == 0):  # check for base case
             return
