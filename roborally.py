@@ -129,11 +129,14 @@ class RoboRally(object):
             
         elif (card.command == 'R'):
             if (robots[0].heading == 0):
-                pass
+                robots[0].heading = 270
+                
             elif (robots[0].heading == 90):
-                pass
+                robots[0].heading = 0
+                
             elif (robots[0].heading == 180):
-                pass
+                robots[0].heading = 90
+                
             elif (robots[0].heading == 270):
-                pass
+                robots[0].heading = 180
         
