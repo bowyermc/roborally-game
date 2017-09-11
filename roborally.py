@@ -103,8 +103,17 @@ class RoboRally(object):
         """
         # UNFINISHED
         card = robots[0].registers[0]  # Retrieve first Card for first Robot
+
         if (card.command == 'F'):
-            pass
+            if (robots[0].heading == 0):
+                pass
+            elif (robots[0].heading == 90):
+                pass
+            elif (robots[0].heading == 180):
+                pass
+            elif (robots[0].heading == 270):
+                pass
+            
         elif (card.command == 'L'):
             if (robots[0].heading == 0):
                 pass
@@ -114,6 +123,7 @@ class RoboRally(object):
                 pass
             elif (robots[0].heading == 270):
                 pass
+            
         elif (card.command == 'R'):
             if (robots[0].heading == 0):
                 pass
