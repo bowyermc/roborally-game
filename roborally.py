@@ -6,6 +6,13 @@ take turns executing their cards.
 Author: Nathan Sprague and Matt Bowyer
 Version: 1.0
 
+This work complies with the JMU Honor Code. 
+
+References and Acknowledgments: I recieved help from Piazza for 
+general purpose questions and specific scenarios in the game
+(such as what constitutes moving in a certain direction and what happens
+when two robots are in the same space).
+
 """
 
 import collections
