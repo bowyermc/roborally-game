@@ -112,8 +112,8 @@ class RoboRally(object):
                         
                         if (robot.heading == 0):  # increase x 
                             robot.x += 1
-                            other_robots = 
-                                [o for o in self.robots if o is not robot]
+                            other_robots = [o for o in self.robots 
+                                            if o is not robot]
                             self._check_pos_0(other_robots, robot)
                             
                         elif (robot.heading == 90):  # increase y
